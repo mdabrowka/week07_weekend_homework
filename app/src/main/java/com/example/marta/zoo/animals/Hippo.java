@@ -12,4 +12,9 @@ public class Hippo extends Animal {
         super(cashValue, name, weight, age);
         this.teethNumber = teethNumber;
     }
+
+
+    public int getTeethNumber() {
+        return this.teethNumber;
+    }
 }

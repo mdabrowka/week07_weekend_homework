@@ -29,9 +29,9 @@ public class Zoo {
         enclosures.remove(newEnclosure);
     }
 
-    public int animalCount() {
-//        iterate through enclosures within the enclosures array and get enclosure.size for each, then add
-        // all the sizes
-    }
+//    public int animalCount() {
+////        iterate through enclosures within the enclosures array and get enclosure.size for each, then add
+//        // all the sizes
+//    }
 
 }
