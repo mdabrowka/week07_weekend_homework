@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 
 public class Enclosure<T extends Animal> {
+    private ArrayList<T> enclosure;
 
 
 }

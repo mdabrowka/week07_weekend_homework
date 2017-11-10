@@ -13,9 +13,25 @@ public class Zoo {
 
 
 
+
+    public int enclosuresNumber() {
+        return enclosures.size();
+    }
+
     public void addEnclosure() {
         Enclosure newEnclosure = new Enclosure();
         enclosures.add(newEnclosure);
+    }
+
+    public void removeEnclosure() {
+        Enclosure newEnclosure = new Enclosure();
+        enclosures.add(newEnclosure);
+        enclosures.remove(newEnclosure);
+    }
+
+    public int animalCount() {
+//        iterate through enclosures within the enclosures array and get enclosure.size for each, then add
+        // all the sizes
     }
 
 }
