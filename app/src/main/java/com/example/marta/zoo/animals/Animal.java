@@ -6,6 +6,14 @@ package com.example.marta.zoo.animals;
 
 public abstract class Animal {
     private int cashValue;
+    private String name;
     private int weight;
     private int age;
+
+    public Animal(int cashValue, String name, int weight, int age) {
+        this.cashValue = cashValue;
+        this.name = name;
+        this.weight = weight;
+        this.age = age;
+    }
 }
