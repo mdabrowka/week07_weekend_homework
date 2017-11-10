@@ -5,10 +5,12 @@ package com.example.marta.zoo.animals;
  */
 
 public class Platypus extends Animal {
+    private int venomLevel;
 
 
 
-    public Platypus(int cashValue, String name, int weight, int age) {
+    public Platypus(int cashValue, String name, int weight, int age, int venomLevel) {
         super(cashValue, name, weight, age);
+        this.venomLevel = venomLevel;
     }
 }

@@ -5,9 +5,11 @@ package com.example.marta.zoo.animals;
  */
 
 public class Turtle extends Animal {
+    private String shellColour;
 
 
-    public Turtle(int cashValue, String name, int weight, int age) {
+    public Turtle(int cashValue, String name, int weight, int age, String shellColour) {
         super(cashValue, name, weight, age);
+        this.shellColour = shellColour;
     }
 }

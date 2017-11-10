@@ -16,4 +16,24 @@ public abstract class Animal {
         this.weight = weight;
         this.age = age;
     }
+
+    public int getCashValue() {
+        return this.cashValue;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+
+
+
 }
