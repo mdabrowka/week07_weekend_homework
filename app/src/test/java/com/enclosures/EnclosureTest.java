@@ -14,9 +14,9 @@ import static junit.framework.Assert.assertEquals;
 
 public class EnclosureTest {
 
-    Enclosure hippoEnclosure;
-    Enclosure platypusEnclosure;
-    Enclosure turtleEnclosure;
+    Enclosure<Hippo> hippoEnclosure;
+    Enclosure<Platypus> platypusEnclosure;
+    Enclosure<Turtle> turtleEnclosure;
     Animal hippo1;
     Animal hippo2;
     Animal hippo3;
@@ -30,7 +30,7 @@ public class EnclosureTest {
         hippoEnclosure = new Enclosure();
         platypusEnclosure = new Enclosure();
         turtleEnclosure = new Enclosure();
-        hippo1 = new Hippo(600, "Ebbie", 400, 3, 15 );
+        hippo1 = new Hippo(600, "Ebenezer", 400, 3, 15 );
         hippo2 = new Hippo(650, "Cleo", 500, 12, 30 );
         hippo3 = new Hippo(700, "Robert", 700, 7, 12 );
         platypus1 = new Platypus(200, "Flora", 10, 3, 8);
@@ -43,6 +43,20 @@ public class EnclosureTest {
 
     @Test
     public void enclosureStartsEmpty() {
+        assertEquals(0, hippoEnclosure.enclosureSize());
+        assertEquals(0, platypusEnclosure.enclosureSize());
+        assertEquals(0, turtleEnclosure.enclosureSize());
+    }
+
+    @Test
+    public void canAddHippoToEnclosure() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        assertEquals(1, hippoEnclosure.enclosureSize() );
+    }
+
+    @Test
+    public void cannotAddHippoToPlatypusEnclosure() {
+        hippoEnclosure.addToEnclosure(platypus1);
         assertEquals(0, hippoEnclosure.enclosureSize());
     }
 

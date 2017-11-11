@@ -11,13 +11,12 @@ import java.util.ArrayList;
 
 public class Enclosure<T extends Animal> {
     private ArrayList<T> enclosure;
-    private Animal hippo;
+
 
 
     public Enclosure() {
         this.enclosure = new ArrayList<T>();
-        this.hippo = new Hippo(200, "Polly", 3, 4, 26) {
-        };
+
     }
 
 
@@ -25,12 +24,12 @@ public class Enclosure<T extends Animal> {
         return enclosure.size();
     }
 
-    public void addToEnclosure() {
-        enclosure.add((T) hippo);
+    public void addToEnclosure(Animal hippo1) {
+        enclosure.add((T) hippo1);
     }
 
-    public void removeFromEnclosure() {
-        enclosure.remove((T) hippo);
+    public void removeFromEnclosure(Animal hippo1) {
+        enclosure.remove((T) hippo1);
     }
 
 
