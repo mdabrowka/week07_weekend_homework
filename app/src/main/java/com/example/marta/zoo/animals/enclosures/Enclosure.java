@@ -29,5 +29,9 @@ public class Enclosure<T extends Animal> {
         enclosure.add((T) hippo);
     }
 
+    public void removeFromEnclosure() {
+        enclosure.remove((T) hippo);
+    }
+
 
 }
