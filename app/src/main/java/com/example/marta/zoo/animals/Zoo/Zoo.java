@@ -29,15 +29,12 @@ public class Zoo {
     }
 
     public void addEnclosure(Enclosure enclosure) {
-        Enclosure newEnclosure = new Enclosure();
-        enclosures.add(newEnclosure);
+        enclosures.add(enclosure);
     }
 
-//    public void removeEnclosure(Enclosure) {
-//        Enclosure newEnclosure = new Enclosure();
-//        enclosures.add(newEnclosure);
-//        enclosures.remove(newEnclosure);
-//    }
+    public void removeEnclosure(Enclosure enclosure) {
+        enclosures.remove(enclosure);
+    }
 
 
 

@@ -49,11 +49,12 @@ public class ZooTest {
         assertEquals(1, zoo.enclosuresNumber());
    }
 
-//    @Test
-//    public void canRemoveEnclosures() {
-//        zoo.addEnclosure((platypusEnclosure);
-//        zoo.addEnclosure(hippoEnclosure);
-//        assertEquals(1, zoo.enclosuresNumber());
-//    }
+    @Test
+    public void canRemoveEnclosures() {
+        zoo.addEnclosure(platypusEnclosure);
+        zoo.addEnclosure(hippoEnclosure);
+        zoo.removeEnclosure(hippoEnclosure);
+        assertEquals(1, zoo.enclosuresNumber());
+    }
 
 }
