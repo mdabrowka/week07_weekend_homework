@@ -12,6 +12,10 @@ public class Zoo {
     private ArrayList<Enclosure> enclosures;
 
 
+    public Zoo() {
+        this.enclosures = new ArrayList();
+
+    }
 
 
     public int enclosuresNumber() {

@@ -57,7 +57,7 @@ public class EnclosureTest {
         assertEquals(0, hippoEnclosure.enclosureSize() );
     }
 
-//    @Test
+//    @Test this won't compile, but it shows that i cannot add platypus to hippoEnclosure
 //    public void cannotAddHippoToPlatypusEnclosure() {
 //        hippoEnclosure.addToEnclosure(platypus1);
 //        hippoEnclosure.addToEnclosure(turtle);
