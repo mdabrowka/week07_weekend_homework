@@ -1,7 +1,7 @@
 package com.example.marta.zoo.animals.enclosures;
 
 import com.example.marta.zoo.animals.Animal;
-import com.example.marta.zoo.animals.Hippo;
+
 
 import java.util.ArrayList;
 
@@ -10,12 +10,12 @@ import java.util.ArrayList;
  */
 
 public class Enclosure<T extends Animal> {
-    private ArrayList<T> enclosure;
+     ArrayList<T> enclosure;
 
 
 
     public Enclosure() {
-        this.enclosure = new ArrayList<T>();
+        this.enclosure = new ArrayList();
 
     }
 
@@ -24,12 +24,12 @@ public class Enclosure<T extends Animal> {
         return enclosure.size();
     }
 
-    public void addToEnclosure(Animal hippo1) {
-        enclosure.add((T) hippo1);
+    public void addToEnclosure(T animal) {
+        enclosure.add(animal);
     }
 
-    public void removeFromEnclosure(Animal hippo1) {
-        enclosure.remove((T) hippo1);
+    public void removeFromEnclosure(T animal) {
+        enclosure.remove(animal);
     }
 
 

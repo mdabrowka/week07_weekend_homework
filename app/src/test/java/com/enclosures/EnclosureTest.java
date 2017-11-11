@@ -17,19 +17,15 @@ public class EnclosureTest {
     Enclosure<Hippo> hippoEnclosure;
     Enclosure<Platypus> platypusEnclosure;
     Enclosure<Turtle> turtleEnclosure;
-    Animal hippo1;
-    Animal hippo2;
-    Animal hippo3;
-    Animal platypus1;
-    Animal platypus2;
-    Animal platypus3;
-    Animal turtle;
+    Hippo hippo1, hippo2, hippo3;
+    Platypus platypus1, platypus2, platypus3;
+    Turtle turtle;
 
     @Before
     public void before() {
-        hippoEnclosure = new Enclosure();
-        platypusEnclosure = new Enclosure();
-        turtleEnclosure = new Enclosure();
+        hippoEnclosure = new Enclosure<Hippo>();
+        platypusEnclosure = new Enclosure<Platypus>();
+        turtleEnclosure = new Enclosure<Turtle>();
         hippo1 = new Hippo(600, "Ebenezer", 400, 3, 15 );
         hippo2 = new Hippo(650, "Cleo", 500, 12, 30 );
         hippo3 = new Hippo(700, "Robert", 700, 7, 12 );
@@ -55,9 +51,17 @@ public class EnclosureTest {
     }
 
     @Test
-    public void cannotAddHippoToPlatypusEnclosure() {
-        hippoEnclosure.addToEnclosure(platypus1);
-        assertEquals(0, hippoEnclosure.enclosureSize());
+    public void canRemoveHippoToEnclosure() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        hippoEnclosure.removeFromEnclosure(hippo1);
+        assertEquals(0, hippoEnclosure.enclosureSize() );
     }
+
+//    @Test
+//    public void cannotAddHippoToPlatypusEnclosure() {
+//        hippoEnclosure.addToEnclosure(platypus1);
+//        hippoEnclosure.addToEnclosure(turtle);
+//        assertEquals(2, hippoEnclosure.enclosureSize());
+//    }
 
 }
