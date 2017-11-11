@@ -57,4 +57,19 @@ public class ZooTest {
         assertEquals(1, zoo.enclosuresNumber());
     }
 
+    @Test
+    public void canCalculateNumberOfAnimalsInZoo() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        hippoEnclosure.addToEnclosure(hippo2);
+        hippoEnclosure.addToEnclosure(hippo3);
+        platypusEnclosure.addToEnclosure(platypus1);
+        platypusEnclosure.addToEnclosure(platypus2);
+        platypusEnclosure.addToEnclosure(platypus3);
+        turtleEnclosure.addToEnclosure(turtle);
+        zoo.addEnclosure(hippoEnclosure);
+        zoo.addEnclosure(platypusEnclosure);
+        zoo.addEnclosure(turtleEnclosure);
+        assertEquals(7, zoo.animalCount());
+    }
+
 }

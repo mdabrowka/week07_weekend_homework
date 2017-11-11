@@ -36,6 +36,8 @@ public class Zoo {
         enclosures.remove(enclosure);
     }
 
+    public int animalCount() {
+    }
 
 
 //    public int animalCount() {
