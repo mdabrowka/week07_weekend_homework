@@ -45,8 +45,15 @@ public class ZooTest {
 
     @Test
     public void canAddEnclosures() {
-        zoo.getEnclosures().add(hippoEnclosure);
+        zoo.addEnclosure(hippoEnclosure);
         assertEquals(1, zoo.enclosuresNumber());
-    }
+   }
+
+//    @Test
+//    public void canRemoveEnclosures() {
+//        zoo.addEnclosure((platypusEnclosure);
+//        zoo.addEnclosure(hippoEnclosure);
+//        assertEquals(1, zoo.enclosuresNumber());
+//    }
 
 }
