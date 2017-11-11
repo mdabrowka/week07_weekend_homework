@@ -17,6 +17,10 @@ public class Zoo {
 
     }
 
+    public ArrayList<Enclosure> getEnclosures() {
+        return this.enclosures;
+    }
+
 
     public int enclosuresNumber() {
         return enclosures.size();
