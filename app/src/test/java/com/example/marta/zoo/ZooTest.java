@@ -17,7 +17,7 @@ import static junit.framework.Assert.assertEquals;
 
 public class ZooTest {
     Zoo zoo;
-    Ticket ticket;
+    Ticket fullPriceTicket;
     Visitor visitor1, visitor2;
     Enclosure<Hippo> hippoEnclosure;
     Enclosure<Platypus> platypusEnclosure;
@@ -29,7 +29,7 @@ public class ZooTest {
     @Before
     public void before() {
         zoo = new Zoo(0);
-        ticket = new Ticket(12);
+        fullPriceTicket = new Ticket(12);
         visitor1 = new Visitor("Andy", 15);
         visitor2 = new Visitor("Will", 25);
         hippoEnclosure = new Enclosure<Hippo>();
@@ -132,7 +132,7 @@ public class ZooTest {
 
     @Test
     public void zooCanSellTicket() {
-        zoo.sellTicket(ticket);
+        zoo.sellTicket(fullPriceTicket);
         assertEquals(12, zoo.getTill());
     }
 
@@ -149,13 +149,13 @@ public class ZooTest {
 
     @Test
     public void checkIfVisitorHasSufficientFunds() {
-        visitor1.checkFunds(ticket.getPrice());
-        assertEquals(true, visitor1.checkFunds(ticket.getPrice()));
+        visitor1.checkFunds(fullPriceTicket.getPrice());
+        assertEquals(true, visitor1.checkFunds(fullPriceTicket.getPrice()));
     }
 
     @Test
     public void canAdmitVisitorAndAcceptPayment() {
-        zoo.admitVisitor(visitor1);
+        zoo.admitVisitor(visitor1, fullPriceTicket);
         assertEquals(12, zoo.getTill());
         assertEquals(3, visitor1.getBudget());
         assertEquals(1, zoo.visitorCount());

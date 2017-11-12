@@ -21,8 +21,7 @@ public class Zoo {
         this.visitors = new ArrayList();
         this.enclosures = new ArrayList();
         this.till = till;
-        this.ticket = ticket;
-        this.visitor = visitor;
+
 
     }
 
@@ -100,20 +99,25 @@ public class Zoo {
         visitors.add(visitor);
     }
 
-    public void admitVisitor(Visitor visitor) {
+//    public void admitVisitor(Visitor visitor, Ticket ticket) {
+//        visitor.payFromBudget(ticket.getPrice());
+//        addVisitor(visitor);
+//    }
+
+
+
+
+
+    public void admitVisitor(Visitor visitor, Ticket ticket) {
         int ticketPrice = ticket.getPrice();
         if (visitor.checkFunds(ticketPrice) == true) {
             visitor.payFromBudget(ticketPrice);
             sellTicket(ticket);
             addVisitor(visitor);
         }
-
     }
 }
 
-// public void admitVisitor(Visitor visitor)
-//check if visitor.getBudget is equal or higher to ticket.price
-//if true, subtract ticket price from the budget, add the ticket price
-//to the till and add visitor to visitors array
+
 
 
