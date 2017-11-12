@@ -93,4 +93,8 @@ public class Zoo {
     public int visitorCount() {
         return visitors.size();
     }
+
+    public void addVisitor(Visitor visitor) {
+        visitors.add(visitor);
+    }
 }

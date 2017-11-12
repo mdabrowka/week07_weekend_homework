@@ -141,8 +141,10 @@ public class ZooTest {
         assertEquals(0, zoo.visitorCount());
     }
 
-//    public void canAddVisitors() {
-//
-//    }
+    @Test
+    public void canAddVisitors() {
+        zoo.addVisitor(visitor1);
+        assertEquals(1, zoo.visitorCount());
+    }
 
 }
