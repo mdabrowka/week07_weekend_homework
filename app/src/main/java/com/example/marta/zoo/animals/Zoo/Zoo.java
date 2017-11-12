@@ -12,10 +12,12 @@ import java.util.ArrayList;
 
 public class Zoo {
     private ArrayList<Enclosure> enclosures;
+    private int till;
 
 
-    public Zoo() {
+    public Zoo(int till) {
         this.enclosures = new ArrayList();
+        this.till = till;
 
     }
 
@@ -42,6 +44,10 @@ public class Zoo {
             total += enclosure.enclosureSize();
         }
         return total;
+    }
+
+    public int getTill() {
+        return this.till;
     }
 
 
