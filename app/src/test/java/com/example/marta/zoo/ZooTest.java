@@ -115,12 +115,12 @@ public class ZooTest {
         assertEquals(600, zoo.getTill());
     }
 
-//    @Test
-//    public void canCalculateValueOfAllAnimals() {
-//        hippoEnclosure.addToEnclosure(hippo1);
-//        hippoEnclosure.addToEnclosure(hippo2);
-//        zoo.addEnclosure(hippoEnclosure);
-//        assertEquals(1250, zoo.totalAnimalValue());
-//    }
+    @Test
+    public void canCalculateValueOfAllAnimals() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        hippoEnclosure.addToEnclosure(hippo2);
+        zoo.addEnclosure(hippoEnclosure);
+        assertEquals(1250, zoo.totalAnimalValue());
+    }
 
 }

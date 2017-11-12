@@ -72,10 +72,12 @@ public class Zoo {
     }
 
 
-//    public int totalAnimalValue() {
-//        for (Enclosure enclosure : enclosures) {
-//
-//
-//        }
-//    }
+    public int totalAnimalValue() {
+        int zooTotal = 0;
+        for (Enclosure enclosure : enclosures) {
+        zooTotal += enclosure.enclosureCashValue();
+
+        }
+        return zooTotal;
+    }
 }
