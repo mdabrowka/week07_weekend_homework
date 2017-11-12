@@ -85,7 +85,7 @@ public class ZooTest {
     }
 
     @Test
-    public void zooCanRemoveAnimalFromanEnclosure() {
+    public void zooCanRemoveAnimalFromAnEnclosure() {
         hippoEnclosure.addToEnclosure(hippo1);
         hippoEnclosure.addToEnclosure(hippo2);
         hippoEnclosure.addToEnclosure(hippo3);
@@ -98,6 +98,12 @@ public class ZooTest {
         zoo.addEnclosure(turtleEnclosure);
         zoo.sellAnimal(hippo1);
         assertEquals(6, zoo.animalCount());
+    }
+
+    @Test
+    public void canAddToTheTill() {
+        zoo.addToTill(3);
+        assertEquals(3, zoo.getTill());
     }
 
 }

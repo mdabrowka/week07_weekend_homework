@@ -65,7 +65,9 @@ public class Zoo {
         }
     }
 
-
+    public void addToTill(int cash) {
+        this.till += cash;
+    }
 
 
 }
