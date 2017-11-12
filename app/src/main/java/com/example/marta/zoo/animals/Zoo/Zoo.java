@@ -49,21 +49,23 @@ public class Zoo {
         return this.till;
     }
 
-//    public void sellAnimal(Animal animal) {
-//        for (Enclosure enclosure : enclosures) {
-//            if (enclosures.contains(animal) == true)
-//                enclosure.removeFromEnclosure(animal);
-//        }
-//    }
 
     public boolean findAnimal(Animal animal) {
         for (Enclosure enclosure : enclosures) {
             if (enclosures.contains(animal));
                 return true;
-
         }
         return false;
     }
+
+    public void sellAnimal(Animal animal) {
+        for (Enclosure enclosure : enclosures) {
+            if (findAnimal(animal) == true)
+                enclosure.removeFromEnclosure(animal);
+        }
+    }
+
+
 
 
 }
