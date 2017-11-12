@@ -12,11 +12,13 @@ import java.util.ArrayList;
 public class Zoo {
     private ArrayList<Enclosure> enclosures;
     private int till;
+    private Ticket ticket;
 
 
     public Zoo(int till) {
         this.enclosures = new ArrayList();
         this.till = till;
+        this.ticket = ticket;
 
     }
 
