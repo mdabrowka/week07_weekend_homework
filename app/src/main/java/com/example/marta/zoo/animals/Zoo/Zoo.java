@@ -1,7 +1,6 @@
 package com.example.marta.zoo.animals.Zoo;
 
 import com.example.marta.zoo.animals.Animal;
-import com.example.marta.zoo.animals.Hippo;
 import com.example.marta.zoo.animals.enclosures.Enclosure;
 
 import java.util.ArrayList;
@@ -50,12 +49,21 @@ public class Zoo {
         return this.till;
     }
 
-
-
-
-//    public int animalCount() {
-////        iterate through enclosures within the enclosures array and get enclosure.size for each, then add
-//        // all the sizes
+//    public void sellAnimal(Animal animal) {
+//        for (Enclosure enclosure : enclosures) {
+//            if (enclosures.contains(animal) == true)
+//                enclosure.removeFromEnclosure(animal);
+//        }
 //    }
+
+    public boolean findAnimal(Animal animal) {
+        for (Enclosure enclosure : enclosures) {
+            if (enclosures.contains(animal));
+                return true;
+
+        }
+        return false;
+    }
+
 
 }

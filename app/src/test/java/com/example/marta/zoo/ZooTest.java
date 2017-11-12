@@ -24,7 +24,7 @@ public class ZooTest {
 
     @Before
     public void before() {
-        zoo = new Zoo();
+        zoo = new Zoo(0);
         hippoEnclosure = new Enclosure<Hippo>();
         platypusEnclosure = new Enclosure<Platypus>();
         turtleEnclosure = new Enclosure<Turtle>();
@@ -70,6 +70,33 @@ public class ZooTest {
         zoo.addEnclosure(platypusEnclosure);
         zoo.addEnclosure(turtleEnclosure);
         assertEquals(7, zoo.animalCount());
+    }
+
+//    @Test
+//    public void zooCanRemoveAnimalFromanEnclosure() {
+//        hippoEnclosure.addToEnclosure(hippo1);
+//        hippoEnclosure.addToEnclosure(hippo2);
+//        hippoEnclosure.addToEnclosure(hippo3);
+//        platypusEnclosure.addToEnclosure(platypus1);
+//        platypusEnclosure.addToEnclosure(platypus2);
+//        platypusEnclosure.addToEnclosure(platypus3);
+//        turtleEnclosure.addToEnclosure(turtle);
+//        zoo.addEnclosure(hippoEnclosure);
+//        zoo.addEnclosure(platypusEnclosure);
+//        zoo.addEnclosure(turtleEnclosure);
+//        zoo.sellAnimal(hippo1);
+//        assertEquals(6, zoo.animalCount());
+//    }
+
+    @Test
+    public void zooCanFindAnimal() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        hippoEnclosure.addToEnclosure(hippo2);
+        platypusEnclosure.addToEnclosure(platypus1);
+        zoo.addEnclosure(hippoEnclosure);
+        zoo.addEnclosure(platypusEnclosure);
+        zoo.findAnimal(hippo1);
+        assertEquals(true, zoo.findAnimal(hippo1));
     }
 
 }
