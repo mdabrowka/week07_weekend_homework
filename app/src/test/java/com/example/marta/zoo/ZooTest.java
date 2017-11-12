@@ -1,6 +1,7 @@
 package com.example.marta.zoo;
 
 import com.example.marta.zoo.animals.*;
+import com.example.marta.zoo.animals.Zoo.Ticket;
 import com.example.marta.zoo.animals.Zoo.Zoo;
 import com.example.marta.zoo.animals.enclosures.*;
 
@@ -15,6 +16,7 @@ import static junit.framework.Assert.assertEquals;
 
 public class ZooTest {
     Zoo zoo;
+    Ticket ticket;
     Enclosure<Hippo> hippoEnclosure;
     Enclosure<Platypus> platypusEnclosure;
     Enclosure<Turtle> turtleEnclosure;
@@ -25,6 +27,7 @@ public class ZooTest {
     @Before
     public void before() {
         zoo = new Zoo(0);
+        ticket = new Ticket(12);
         hippoEnclosure = new Enclosure<Hippo>();
         platypusEnclosure = new Enclosure<Platypus>();
         turtleEnclosure = new Enclosure<Turtle>();
@@ -121,6 +124,12 @@ public class ZooTest {
         hippoEnclosure.addToEnclosure(hippo2);
         zoo.addEnclosure(hippoEnclosure);
         assertEquals(1250, zoo.totalAnimalValue());
+    }
+
+    @Test
+    public void zooCanSellTicket() {
+        zoo.sellTicket(ticket);
+        assertEquals(12, zoo.getTill());
     }
 
 }

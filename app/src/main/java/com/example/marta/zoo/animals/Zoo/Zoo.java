@@ -82,4 +82,8 @@ public class Zoo {
         }
         return zooTotal;
     }
+
+    public void sellTicket(Ticket ticket) {
+        this.till += ticket.getPrice();
+    }
 }
