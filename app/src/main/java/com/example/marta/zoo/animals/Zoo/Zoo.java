@@ -37,7 +37,14 @@ public class Zoo {
     }
 
     public int animalCount() {
+        int total = 0;
+        for (Enclosure enclosure : enclosures) {
+            total += enclosure.enclosureSize();
+        }
+        return total;
     }
+
+
 
 
 //    public int animalCount() {
