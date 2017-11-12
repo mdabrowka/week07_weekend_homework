@@ -58,8 +58,8 @@ public class Zoo {
 
     public boolean findAnimal(Animal animal) {
         for (Enclosure enclosure : enclosures) {
-            if (enclosures.contains(animal));
-                return true;
+            if (enclosures.contains(animal)) ;
+            return true;
         }
         return false;
     }
@@ -81,7 +81,7 @@ public class Zoo {
     public int totalAnimalValue() {
         int zooTotal = 0;
         for (Enclosure enclosure : enclosures) {
-        zooTotal += enclosure.enclosureCashValue();
+            zooTotal += enclosure.enclosureCashValue();
 
         }
         return zooTotal;
@@ -97,8 +97,16 @@ public class Zoo {
     }
 
     public void addVisitor(Visitor visitor) {
-        sellTicket(ticket);
         visitors.add(visitor);
+    }
+
+    public void admitVisitor(Visitor visitor) {
+        int ticketPrice = ticket.getPrice();
+        if (visitor.checkFunds(ticketPrice) == true) {
+            visitor.payFromBudget(ticketPrice);
+            sellTicket(ticket);
+            addVisitor(visitor);
+        }
 
     }
 }
@@ -107,3 +115,5 @@ public class Zoo {
 //check if visitor.getBudget is equal or higher to ticket.price
 //if true, subtract ticket price from the budget, add the ticket price
 //to the till and add visitor to visitors array
+
+

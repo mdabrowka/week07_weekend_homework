@@ -148,9 +148,17 @@ public class ZooTest {
     }
 
     @Test
+    public void checkIfVisitorHasSufficientFunds() {
+        visitor1.checkFunds(ticket.getPrice());
+        assertEquals(true, visitor1.checkFunds(ticket.getPrice()));
+    }
+
+    @Test
     public void canAdmitVisitorAndAcceptPayment() {
-        zoo.addVisitor(visitor1);
+        zoo.admitVisitor(visitor1);
         assertEquals(12, zoo.getTill());
+        assertEquals(3, visitor1.getBudget());
+        assertEquals(1, zoo.visitorCount());
     }
 
 }

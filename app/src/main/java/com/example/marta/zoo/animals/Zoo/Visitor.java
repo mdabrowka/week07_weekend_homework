@@ -8,9 +8,11 @@ public class Visitor {
     private String name;
     private int budget;
 
+
     public Visitor(String name, int budget) {
         this.name = name;
         this.budget = budget;
+
     }
 
     public String getName() {
@@ -23,6 +25,11 @@ public class Visitor {
 
     public void payFromBudget(int cash) {
         this.budget -= cash;
+    }
+
+    public boolean checkFunds(int amount) {
+        if (this.budget >= amount);
+        return true;
     }
 
 }
