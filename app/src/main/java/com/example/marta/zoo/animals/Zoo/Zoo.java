@@ -14,6 +14,7 @@ public class Zoo {
     private ArrayList<Visitor> visitors;
     private int till;
     private Ticket ticket;
+    private Visitor visitor;
 
 
     public Zoo(int till) {
@@ -21,6 +22,7 @@ public class Zoo {
         this.enclosures = new ArrayList();
         this.till = till;
         this.ticket = ticket;
+        this.visitor = visitor;
 
     }
 
@@ -95,6 +97,13 @@ public class Zoo {
     }
 
     public void addVisitor(Visitor visitor) {
+        sellTicket(ticket);
         visitors.add(visitor);
+
     }
 }
+
+// public void admitVisitor(Visitor visitor)
+//check if visitor.getBudget is equal or higher to ticket.price
+//if true, subtract ticket price from the budget, add the ticket price
+//to the till and add visitor to visitors array
