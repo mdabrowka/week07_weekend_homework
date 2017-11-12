@@ -32,5 +32,13 @@ public class Enclosure<T extends Animal> {
         enclosure.remove(animal);
     }
 
+    public int enclosureCashValue() {
+        int total = 0;
+        for (Animal animal : enclosure) {
+            total += animal.getCashValue();
+        }
+        return total;
 
+    }
 }
+

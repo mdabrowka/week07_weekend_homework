@@ -1,5 +1,7 @@
 package com.enclosures;
 
+import android.support.v4.widget.TextViewCompat;
+
 import com.example.marta.zoo.animals.*;
 import com.example.marta.zoo.animals.enclosures.Enclosure;
 
@@ -63,5 +65,13 @@ public class EnclosureTest {
 //        hippoEnclosure.addToEnclosure(turtle);
 //        assertEquals(2, hippoEnclosure.enclosureSize());
 //    }
+
+    @Test
+    public void canCalculateAnimalValueInEnclosure() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        hippoEnclosure.addToEnclosure(hippo2);
+        hippoEnclosure.enclosureCashValue();
+        assertEquals(1250, hippoEnclosure.enclosureCashValue());
+    }
 
 }
