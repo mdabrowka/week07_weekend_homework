@@ -106,4 +106,13 @@ public class ZooTest {
         assertEquals(3, zoo.getTill());
     }
 
+    @Test
+    public void canSellAnimalAndReceiveCash() {
+        hippoEnclosure.addToEnclosure(hippo1);
+        hippoEnclosure.addToEnclosure(hippo2);
+        zoo.addEnclosure(hippoEnclosure);
+        zoo.sellAnimal(hippo1);
+        assertEquals(600, zoo.getTill());
+    }
+
 }

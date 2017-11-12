@@ -62,6 +62,8 @@ public class Zoo {
         for (Enclosure enclosure : enclosures) {
             if (findAnimal(animal) == true)
                 enclosure.removeFromEnclosure(animal);
+            int cash = animal.getCashValue();
+            addToTill(cash);
         }
     }
 
